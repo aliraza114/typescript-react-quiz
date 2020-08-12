@@ -1,17 +1,15 @@
-import React from 'react';
-// Types
-import { AnswerObject } from '../App';
-// Styles
-import { Wrapper, ButtonWrapper } from './QuestionCard.styles';
+import React from 'react'
+import { AnswerObject } from '../App'
+import { Wrapper, ButtonWrapper } from './Question.styles'
 
 type Props = {
-  question: string;
-  answers: string[];
-  callback: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  userAnswer: AnswerObject | undefined;
-  questionNr: number;
-  totalQuestions: number;
-};
+  question: string
+  answers: string[]
+  callback: (e: React.MouseEvent<HTMLButtonElement>) => void
+  userAnswer: AnswerObject | undefined
+  questionNr: number
+  totalQuestions: number
+}
 
 const QuestionCard: React.FC<Props> = ({
   question,
@@ -40,6 +38,6 @@ const QuestionCard: React.FC<Props> = ({
       ))}
     </div>
   </Wrapper>
-);
+)
 
-export default QuestionCard;
+export default QuestionCard

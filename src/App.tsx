@@ -1,7 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import QuestionCard from './components/QuestionCard';
 
-function App() {
+const App = () => {
+
+  const [loading, setLoading] = useState(false)
+  const [question, setQuestion] = useState([])
+  const [number, setNumber] = useState(0)
+  const [userAnswer, setUserAnswer] = useState([])
+  const [score, setScore] = useState(0)
+  const [gameOver, setGameOver] = useState()
+
 
   const apiCall = async () => {
 
